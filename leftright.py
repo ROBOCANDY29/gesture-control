@@ -1,7 +1,7 @@
 # Importing Libraries
 import cv2
 import mediapipe as mp
-from gesture import smthg
+from gesture import smthg, smthg2
 # Used to convert protobuf message to a dictionary.
 from google.protobuf.json_format import MessageToDict
 
@@ -64,6 +64,7 @@ while True:
                     cv2.putText(img, label+' Hand', (460, 50),
                                 cv2.FONT_HERSHEY_COMPLEX,
                                 0.9, (0, 255, 0), 2)
+                    smthg2(imgRGB, frame_height, frame_width, img)
 
     # Display Video and when 'q'
     # is entered, destroy the window
